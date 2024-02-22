@@ -41,9 +41,38 @@ body {
     display: flex;
     color: white;
 }
-.nav p {
+.logo_burger {
+    display: flex;
+    flex-direction: row;
+}
+.nav .logo {
     font-family: "ManropeExtraBold", sans-serif;
     font-size: 22px;
+}
+.burger_open {
+    cursor: pointer;
+}
+.burger_close {
+    cursor: pointer;
+}
+.b1, .b2, .b3 {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+.burger_close .b1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.burger_close .b2 {
+    opacity: 0;
+}
+.burger_close .b3 {
+    transform: rotate(-45deg) translate(7px, -5px);
+}
+#my_menu {
+    display: flex;
+    gap: 30px;
 }
 .nav ul {
     display: flex;
@@ -54,7 +83,7 @@ body {
 }
 .nav .buttons {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     font-family: "ManropeMedium", sans-serif;
 }
 .nav .btn {
@@ -386,11 +415,15 @@ body {
     .nav {
         flex-direction: column;
     }
-    .nav p {
+    .nav .logo {
         margin-bottom: 15px;
+        font-size: 35px;
+    }
+    #my_menu {
+        flex-direction: column;
     }
     ul {
-        margin-bottom: 20px;
+
     }
     .hero {
         flex-direction: column;
@@ -424,6 +457,23 @@ body {
     }
 }
 @media screen and (max-width: 768px) {
+    .logo_burger {
+        width: 100%;
+        position: relative;
+    }
+    .nav .logo {
+        margin-left: 15px;
+    }
+    .burger_open {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+    .burger_close {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
     ul {
         flex-direction: column;
     }

@@ -8,18 +8,33 @@
 <body>
     <br><br>
     <div class="nav">
-        <p>GPT-4</p>
-        <ul>
-            <li>Главная</li>
-            <li>Что такое GPT?</li>
-            <li>Open AI</li>
-            <li>Кейсы</li>
-            <li>Библиотека</li>
-        </ul>
-        <div class="buttons">
-            <button class="btn btn1">Войти</button>
-            <button class="btn btn2">Регистрация</button>
+        <div class="logo_burger">
+            <p class="logo">GPT-4</p>
+            <div class="burger_open" id="open" onclick="openMenu()">
+                <div class="b1"></div>
+                <div class="b2"></div>
+                <div class="b3"></div>
+            </div>
+            <div class="burger_close" id="close" onclick="closeMenu()">
+                <div class="b1"></div>
+                <div class="b2"></div>
+                <div class="b3"></div>
+            </div>
         </div>
+        <div id="my_menu">
+            <ul>
+                <li>Главная</li>
+                <li>Что такое GPT?</li>
+                <li>Open AI</li>
+                <li>Кейсы</li>
+                <li>Библиотека</li>
+            </ul>
+            <div class="buttons">
+                <button class="btn btn1">Войти</button>
+                <button class="btn btn2">Регистрация</button>
+            </div>
+        </div>
+
     </div>
     <div class="hero">
         <div class="hero_left">
@@ -312,4 +327,5 @@
     </div>
     <p class="footer_text2" style="text-align: center">© 2023 GPT-3. Все права защищены.</p>
 </body>
+<script src="js/script.js"></script>
 </html>
