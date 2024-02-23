@@ -49,6 +49,9 @@ body {
     font-family: "ManropeExtraBold", sans-serif;
     font-size: 22px;
 }
+.nav .logo {
+    cursor: pointer;
+}
 .burger_open {
     cursor: pointer;
 }
@@ -81,6 +84,13 @@ body {
     font-size: 18px;
     list-style-type: none;
 }
+.nav ul li {
+    border-bottom: 2px solid transparent;
+}
+.nav ul li:hover {
+    cursor: pointer;
+    border-color: white;
+}
 .nav .buttons {
     display: flex;
     gap: 15px;
@@ -89,15 +99,25 @@ body {
 .nav .btn {
     font-size: 18px;
     color: white;
-    padding: 20px;
-    border: none;
+    padding: 18px;
 }
 .btn1 {
     background-color: inherit;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+.btn1:hover {
+    border-color: white;
+    cursor: pointer;
 }
 .btn2 {
     background-color: #FF4820;
     border-radius: 5px;
+    border: 1px solid #FF4820;
+}
+.btn2:hover {
+    cursor: pointer;
+    background-color: transparent;
 }
 .hero {
     width: 95%;
@@ -128,7 +148,8 @@ body {
     font-size: 20px;
     padding: 20px;
     border-radius: 5px 0 0 5px;
-    border: none;
+    border: 1px solid #052D56;
+    color: white;
 }
 ::placeholder {
     color: #92AAC1;
@@ -140,7 +161,11 @@ body {
     color: white;
     padding: 20px 40px;
     border-radius: 0 5px 5px 0;
-    border: none;
+    border: 1px solid #FF4820;
+}
+.btn3:hover {
+    cursor: pointer;
+    background-color: transparent;
 }
 .hero_bottom {
     display: flex;
@@ -161,6 +186,9 @@ body {
 }
 .brands img {
     margin-bottom: 10px;
+}
+.brands img:hover {
+    cursor: pointer;
 }
 .card_h {
     margin-top: 15px;
@@ -222,6 +250,9 @@ body {
 .what_middle .text2 {
     text-align: right;
 }
+.what_middle .text2:hover {
+    cursor: pointer;
+}
 .what_bottom {
     display: flex;
     gap: 30px;
@@ -243,6 +274,9 @@ body {
 .future_left p {
     width: 85%;
     margin-left: 0;
+}
+.future_left .text2:hover {
+    cursor: pointer;
 }
 .future_right {
     width: 55%;
@@ -293,6 +327,9 @@ body {
 .expect_right .card_p {
     font-family: "ManropeMedium", sans-serif;
 }
+.expect_right .link {
+    cursor: pointer;
+}
 .sign {
     width: 90%;
     display: flex;
@@ -321,7 +358,12 @@ body {
     color: white;
     padding: 20px 50px;
     border-radius: 30px;
-    border: none;
+    border: 2px solid transparent;
+}
+.btn4:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border-color: black;
 }
 .articles {
     width: 90%;
@@ -362,6 +404,9 @@ body {
     position: absolute;
     bottom: 30px;
 }
+.articles_content .card .link {
+    cursor: pointer;
+}
 .footer {
     width: 100%;
     background-color: #031B34;
@@ -377,6 +422,11 @@ body {
     color: white;
     padding: 20px 50px;
     border: 1px solid white;
+}
+.btn5:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
 }
 .footer_bottom {
     width: 90%;
@@ -408,6 +458,9 @@ body {
     font-family: "ManropeLight", sans-serif;
     font-size: 12px;
     color: white;
+}
+.footer_bottom .link:hover {
+    cursor: pointer;
 }
 
 /*Медиа запросы*/
