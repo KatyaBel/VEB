@@ -1,23 +1,23 @@
 /* Подключение шрифтов */
 @font-face {
     font-family: "ManropeLight";
-    src: url(/fonts/Manrope-Light.ttf);
+    src: url(../fonts/Manrope-Light.ttf);
 }
 @font-face {
     font-family: "ManropeRegular";
-    src: url(/fonts/Manrope-Regular.ttf);
+    src: url(../fonts/Manrope-Regular.ttf);
 }
 @font-face {
     font-family: "ManropeMedium";
-    src: url(/fonts/Manrope-Medium.ttf);
+    src: url(../fonts/Manrope-Medium.ttf);
 }
 @font-face {
     font-family: "ManropeBold";
-    src: url(/fonts/Manrope-Bold.ttf);
+    src: url(../fonts/Manrope-Bold.ttf);
 }
 @font-face {
     font-family: "ManropeExtraBold";
-    src: url(/fonts/Manrope-ExtraBold.ttf);
+    src: url(../fonts/Manrope-ExtraBold.ttf);
 }
 
 /*Для всех*/
@@ -38,6 +38,7 @@ body {
 .nav {
     width: 95%;
     margin-bottom: 15px;
+    margin-top: 40px;
     display: flex;
     color: white;
 }
@@ -122,11 +123,13 @@ body {
 .hero {
     width: 95%;
     display: flex;
+    margin-bottom: 90px;
 }
 .hero_left {
     margin-left: 40px;
 }
 .hero_top {
+    margin-bottom: 25px;
     font-family: "ManropeExtraBold", sans-serif;
     font-size: 56px;
     background-image: linear-gradient(to right, #AE67FA 0%, #F49867 100%);
@@ -134,12 +137,14 @@ body {
     -webkit-text-fill-color: transparent;
 }
 .hero_middle {
+    margin-bottom: 30px;
     font-family: "ManropeRegular", sans-serif;
     font-size: 20px;
     color: #81AFDD;
 }
 .hero form {
     display: flex;
+    margin-bottom: 25px;
 }
 .mail {
     flex-grow: 1;
@@ -180,6 +185,7 @@ body {
     min-width: 45%;
 }
 .brands {
+    margin-bottom: 100px;
     width: 50%;
     display: flex;
     gap: 30px;
@@ -222,12 +228,14 @@ body {
     width: 90%;
     background: url("/img/bg.png") 0 0 /cover;
     border: 1px solid transparent;
+    margin-bottom: 180px;
 }
 .what_ins {
     margin: 50px 45px;
 }
 .what_top {
     display: flex;
+    margin-bottom: 40px;
 }
 .what_top .card_h {
     margin-top: 0;
@@ -243,6 +251,7 @@ body {
 }
 .what_middle {
     display: flex;
+    margin-bottom: 40px;
 }
 .what_middle p {
     width: 50%;
@@ -255,13 +264,14 @@ body {
 }
 .what_bottom {
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 .what_bottom .text2 {
     width: 100%;
 }
 .what_bottom .card_h {
     margin-top: 10px;
+    margin-bottom: 40px;
 }
 .future {
     width: 90%;
@@ -275,6 +285,9 @@ body {
     width: 85%;
     margin-left: 0;
 }
+.future_left .text2 {
+    margin-top: 30px;
+}
 .future_left .text2:hover {
     cursor: pointer;
 }
@@ -284,6 +297,7 @@ body {
 .future_right .card {
     display: flex;
     gap: 25px;
+    margin-bottom: 40px;
 }
 .future_right .card .card_h {
     width: 40%;
@@ -309,6 +323,7 @@ body {
 }
 .expect {
     width: 90%;
+    margin-bottom: 150px;
 }
 .expect_ins {
     display: flex;
@@ -323,18 +338,21 @@ body {
 .expect_right p {
     width: 80%;
     margin-left: 0;
+    margin-bottom: 15px;
 }
 .expect_right .card_p {
     font-family: "ManropeMedium", sans-serif;
 }
 .expect_right .link {
     cursor: pointer;
+    margin-top: 30px;
 }
 .sign {
     width: 90%;
     display: flex;
     background: linear-gradient(to right, #AE67FA, #F49867);
     border-radius: 10px;
+    margin-bottom: 150px;
 }
 .sign_left {
     width: 50%;
@@ -367,10 +385,12 @@ body {
 }
 .articles {
     width: 90%;
+    margin-bottom: 50px;
 }
 .articles .text1 {
     width: 85%;
     font-size: 65px;
+    margin-bottom: 50px;
 }
 .articles_content {
     display: flex;
@@ -406,14 +426,17 @@ body {
 }
 .articles_content .card .link {
     cursor: pointer;
+    margin-top: 40px;
 }
 .footer {
     width: 100%;
     background-color: #031B34;
     text-align: center;
+    border: 1px solid transparent;
 }
 .footer .text1 {
     font-size: 62px;
+    margin-top: 150px;
 }
 .btn5 {
     font-family: "ManropeMedium", sans-serif;
@@ -422,6 +445,7 @@ body {
     color: white;
     padding: 20px 50px;
     border: 1px solid white;
+    margin-top: 50px;
 }
 .btn5:hover {
     cursor: pointer;
@@ -433,6 +457,8 @@ body {
     display: flex;
     gap: 20px;
     text-align: left;
+    margin-top: 150px;
+    margin-bottom: 70px;
 }
 .footer_bottom .logo {
     width: 25%;
@@ -440,6 +466,7 @@ body {
 }
 .footer_bottom .logo img {
     width: 40%;
+    margin-bottom: 10px;
 }
 .footer_bottom .logo p {
     width: 60%;
@@ -453,11 +480,13 @@ body {
     font-family: "ManropeBold", sans-serif;
     font-size: 14px;
     color: white;
+    margin-bottom: 20px;
 }
 .footer_text2 {
     font-family: "ManropeLight", sans-serif;
     font-size: 12px;
     color: white;
+    margin-bottom: 15px;
 }
 .footer_bottom .link:hover {
     cursor: pointer;
