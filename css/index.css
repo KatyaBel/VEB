@@ -20,7 +20,7 @@
     src: url(../fonts/Manrope-ExtraBold.ttf);
 }
 
-/*Для всех*/
+/*Общее*/
 * {
     margin: auto;
     padding: 0;
@@ -29,28 +29,28 @@ img {
     max-width: 100%;
     margin: 0;
 }
-
-/*Начало*/
+.hidden {
+    display: none !important;
+}
 body {
     background: #040d1a;
     background-size: cover;
 }
+
+/*Шапка*/
 .nav {
     width: 95%;
-    margin-bottom: 15px;
+    margin-bottom: 60px;
     margin-top: 40px;
     display: flex;
     color: white;
 }
 .logo_burger {
     display: flex;
-    flex-direction: row;
 }
 .nav .logo {
     font-family: "ManropeExtraBold", sans-serif;
     font-size: 22px;
-}
-.nav .logo {
     cursor: pointer;
 }
 .burger_open {
@@ -74,13 +74,13 @@ body {
 .burger_close .b3 {
     transform: rotate(-45deg) translate(7px, -5px);
 }
-#my_menu {
+.menu {
     display: flex;
-    gap: 30px;
+    gap: 40px;
 }
 .nav ul {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     font-family: "ManropeMedium", sans-serif;
     font-size: 18px;
     list-style-type: none;
@@ -91,6 +91,13 @@ body {
 .nav ul li:hover {
     cursor: pointer;
     border-color: white;
+}
+.nav ul .active {
+    color: #f49867;
+    border-bottom: 2px solid #f49867;
+}
+.nav ul .active:hover {
+    border-color: #f49867;
 }
 .nav .buttons {
     display: flex;
@@ -104,22 +111,24 @@ body {
 }
 .btn1 {
     background-color: inherit;
-    border: 1px solid transparent;
     border-radius: 5px;
+    border: none;
 }
 .btn1:hover {
-    border-color: white;
+    background-color: #ae67fa;
     cursor: pointer;
 }
 .btn2 {
     background-color: #FF4820;
     border-radius: 5px;
-    border: 1px solid #FF4820;
+    border: none;
 }
 .btn2:hover {
     cursor: pointer;
-    background-color: transparent;
+    background-color: #ae67fa;
 }
+
+/*Голова*/
 .hero {
     width: 95%;
     display: flex;
@@ -129,7 +138,7 @@ body {
     margin-left: 40px;
 }
 .hero_top {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     font-family: "ManropeExtraBold", sans-serif;
     font-size: 56px;
     background-image: linear-gradient(to right, #AE67FA 0%, #F49867 100%);
@@ -137,7 +146,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 .hero_middle {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     font-family: "ManropeRegular", sans-serif;
     font-size: 20px;
     color: #81AFDD;
@@ -153,7 +162,7 @@ body {
     font-size: 20px;
     padding: 20px;
     border-radius: 5px 0 0 5px;
-    border: 1px solid #052D56;
+    border: none;
     color: white;
 }
 ::placeholder {
@@ -166,11 +175,11 @@ body {
     color: white;
     padding: 20px 40px;
     border-radius: 0 5px 5px 0;
-    border: 1px solid #FF4820;
+    border: none;
 }
 .btn3:hover {
     cursor: pointer;
-    background-color: transparent;
+    background-color: #ae67fa;
 }
 .hero_bottom {
     display: flex;
@@ -184,14 +193,19 @@ body {
 .hero_right {
     min-width: 45%;
 }
+.hero_right img {
+    display: block;
+    margin: auto;
+}
+
+/*Бренды*/
 .brands {
     margin-bottom: 100px;
-    width: 50%;
+    width: 65%;
     display: flex;
-    gap: 30px;
-}
-.brands img {
-    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
 }
 .brands img:hover {
     cursor: pointer;
@@ -219,11 +233,16 @@ body {
     -webkit-text-fill-color: transparent;
 }
 .text2 {
-    margin-right: 0;
     font-family: "ManropeMedium", sans-serif;
     font-size: 16px;
     color: #FF8A71;
+    border-bottom: 1px solid transparent;
 }
+.text2:hover {
+    border-color: #FF8A71;
+}
+
+/*Что такое gpt*/
 .what {
     width: 90%;
     background: url("/img/bg.png") 0 0 /cover;
@@ -235,7 +254,7 @@ body {
 }
 .what_top {
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 .what_top .card_h {
     margin-top: 0;
@@ -251,13 +270,15 @@ body {
 }
 .what_middle {
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
+    margin-top: 0;
 }
-.what_middle p {
+.what_middle .text1 {
     width: 50%;
 }
 .what_middle .text2 {
     text-align: right;
+    margin-top: 0;
 }
 .what_middle .text2:hover {
     cursor: pointer;
@@ -273,6 +294,8 @@ body {
     margin-top: 10px;
     margin-bottom: 40px;
 }
+
+/*Будущее наступило*/
 .future {
     width: 90%;
     display: flex;
@@ -280,13 +303,16 @@ body {
 .future_left {
     width: 45%;
     margin-top: 0;
+    display: flex;
+    flex-direction: column;
 }
-.future_left p {
+.future_left .text1 {
     width: 85%;
-    margin-left: 0;
 }
 .future_left .text2 {
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-bottom: 50px;
 }
 .future_left .text2:hover {
     cursor: pointer;
@@ -296,31 +322,29 @@ body {
 }
 .future_right .card {
     display: flex;
-    gap: 25px;
+    gap: 30px;
     margin-bottom: 40px;
 }
 .future_right .card .card_h {
-    width: 40%;
-}
-.future_right .card_h {
+    min-width: 35%;
     margin-top: 0;
+    margin-left: 0;
     position: relative;
-}
-.future_right .card_h p {
-    margin-top: 10px;
-    font-size: 18px;
 }
 .future_right .card_h img {
     position: absolute;
     top: 0;
 }
-.future_right .card_p {
+.future_right .card_h p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.future_right .card .card_p {
     margin-top: 0;
     font-size: 14px;
 }
-.future_right .card .card_p {
-    width: 60%;
-}
+
+/*Превосходя ожидания*/
 .expect {
     width: 90%;
     margin-bottom: 150px;
@@ -347,6 +371,8 @@ body {
     cursor: pointer;
     margin-top: 30px;
 }
+
+/*Плашка с кнопкой*/
 .sign {
     width: 90%;
     display: flex;
@@ -383,6 +409,8 @@ body {
     background-color: transparent;
     border-color: black;
 }
+
+/*Статьи*/
 .articles {
     width: 90%;
     margin-bottom: 50px;
@@ -428,6 +456,8 @@ body {
     cursor: pointer;
     margin-top: 40px;
 }
+
+/*Footer*/
 .footer {
     width: 100%;
     background-color: #031B34;
@@ -497,25 +527,68 @@ body {
     .nav {
         flex-direction: column;
     }
+    .logo_burger {
+        width: 100%;
+        position: relative;
+    }
     .nav .logo {
+        margin-left: 15px;
         margin-bottom: 15px;
         font-size: 35px;
     }
-    #my_menu {
+    .burger_open {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+    .burger_close {
+        position: absolute;
+        top: 15px;
+        right: 25px;
+    }
+    .menu {
         flex-direction: column;
     }
-    ul {
-
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu ul li {
+        font-size: 25px;
+    }
+    .nav .buttons {
+        margin-top: 15px;
     }
     .hero {
+        width: 85%;
         flex-direction: column;
+        text-align: center;
     }
     .hero_left {
         margin-left: 0;
     }
+    .hero form, .hero_bottom {
+        width: 90%;
+    }
+    .hero_right {
+        width: 60%;
+    }
     .brands {
+        width: 80%;
+    }
+    .what {
+        margin-bottom: 100px;
+    }
+    .future {
         flex-direction: column;
-        width: 20%;
+    }
+    .future_left, .future_right {
+        width: 100%;
+    }
+    .future_left .text1 {
+        width: 100%;
+    }
+    .future_right .card {
+        gap: 80px;
     }
     .expect_ins {
         flex-direction: column-reverse;
@@ -539,25 +612,20 @@ body {
     }
 }
 @media screen and (max-width: 768px) {
-    .logo_burger {
-        width: 100%;
-        position: relative;
+    .hero_top {
+        font-size: 30px;
     }
-    .nav .logo {
-        margin-left: 15px;
+    .hero_middle {
+        font-size: 15px;
     }
-    .burger_open {
-        position: absolute;
-        top: 15px;
-        right: 25px;
+    .mail {
+        font-size: 15px;
     }
-    .burger_close {
-        position: absolute;
-        top: 15px;
-        right: 25px;
+    .btn3 {
+        font-size: 15px;
     }
-    ul {
-        flex-direction: column;
+    .hero_right {
+        width: 90%;
     }
     .what_top {
         flex-direction: column;
@@ -568,21 +636,23 @@ body {
     .what_middle {
         flex-direction: column;
     }
-    .what_middle p {
+    .what_middle .text1 {
         width: 100%;
+        font-size: 30px;
     }
     .what_middle .text2 {
-        width: 100%;
+        margin-left: 0;
         text-align: left;
     }
     .what_bottom {
         flex-direction: column;
     }
-    .future {
-        flex-direction: column;
+    .future_left .text1 {
+        font-size: 25px;
     }
-    .future_left, .future_right, .future_left p {
-        width: 100%;
+    .future_right .card {
+        flex-direction: column;
+        gap: 10px;
     }
     .sign {
         flex-direction: column;
