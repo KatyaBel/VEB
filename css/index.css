@@ -305,6 +305,7 @@ body {
     margin-top: 0;
     display: flex;
     flex-direction: column;
+
 }
 .future_left .text1 {
     width: 85%;
@@ -351,25 +352,36 @@ body {
 }
 .expect_ins {
     display: flex;
+    gap: 20px;
     margin: 50px 45px;
 }
-.expect_left, .expect_right {
-    width: 50%;
+.expect_left {
+    min-width: 50%;
 }
 .expect_right {
-    margin-bottom: 7%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6%;
 }
 .expect_right p {
-    width: 80%;
     margin-left: 0;
-    margin-bottom: 15px;
+}
+.expect_right .text2:hover {
+    cursor: pointer;
+}
+.expect_right .link {
+    color: #71E5FF;
+    margin-bottom: 20px;
+}
+.expect_right .link:hover {
+    border-color: #71E5FF;
+}
+.expect_right .text1 {
+    margin-bottom: 25px;
 }
 .expect_right .card_p {
     font-family: "ManropeMedium", sans-serif;
-}
-.expect_right .link {
-    cursor: pointer;
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 /*Плашка с кнопкой*/
@@ -381,12 +393,20 @@ body {
     margin-bottom: 150px;
 }
 .sign_left {
-    width: 50%;
+    width: 60%;
     margin: 25px 45px;
+    display: flex;
+    flex-direction: column;
 }
 .sign_text1 {
     font-family: "ManropeMedium", sans-serif;
     font-size: 12px;
+    border-bottom: 1px solid transparent;
+    margin-left: 0;
+}
+.sign_text1:hover {
+    cursor: pointer;
+    border-color: black;
 }
 .sign_text2 {
     font-family: "ManropeExtraBold", sans-serif;
@@ -402,12 +422,11 @@ body {
     color: white;
     padding: 20px 50px;
     border-radius: 30px;
-    border: 2px solid transparent;
+    border: none;
 }
 .btn4:hover {
     cursor: pointer;
-    background-color: transparent;
-    border-color: black;
+    background-color: #ae67fa;
 }
 
 /*Статьи*/
@@ -454,7 +473,12 @@ body {
 }
 .articles_content .card .link {
     cursor: pointer;
+    display: inline;
     margin-top: 40px;
+    border-bottom: 1px solid transparent;
+}
+.articles_content .card .link:hover {
+    border-color: white;
 }
 
 /*Footer*/
@@ -505,21 +529,29 @@ body {
 .footer_bottom .card {
     width: 15%;
     margin-top: 0;
+    display: flex;
+    flex-direction: column;
 }
 .footer_text1 {
     font-family: "ManropeBold", sans-serif;
     font-size: 14px;
     color: white;
     margin-bottom: 20px;
+    margin-left: 0;
 }
 .footer_text2 {
     font-family: "ManropeLight", sans-serif;
     font-size: 12px;
     color: white;
     margin-bottom: 15px;
+    margin-left: 0;
 }
-.footer_bottom .link:hover {
+.footer_bottom .card .link {
+    border-bottom: 1px solid transparent;
+}
+.footer_bottom .card .link:hover {
     cursor: pointer;
+    border-color: white;
 }
 
 /*Медиа запросы*/
@@ -590,6 +622,9 @@ body {
     .future_right .card {
         gap: 80px;
     }
+    .expect {
+        margin-bottom: 40px;
+    }
     .expect_ins {
         flex-direction: column-reverse;
     }
@@ -598,6 +633,12 @@ body {
     }
     .expect_right {
         width: 100%;
+    }
+    .sign {
+        margin-bottom: 50px;
+    }
+    .articles .text1 {
+        font-size: 45px;
     }
     .articles_content {
         flex-direction: column;
@@ -609,6 +650,9 @@ body {
     .articles_content .card .card_read {
         position: relative;
         bottom: 0;
+    }
+    .footer_bottom .logo p {
+        width: 100%;
     }
 }
 @media screen and (max-width: 768px) {
@@ -654,6 +698,13 @@ body {
         flex-direction: column;
         gap: 10px;
     }
+    .expect {
+        margin-top: 30px;
+    }
+    .expect_ins {
+        width: 100%;
+        margin: auto;
+    }
     .sign {
         flex-direction: column;
     }
@@ -663,11 +714,20 @@ body {
     .sign_right {
         margin: auto;
     }
+    .btn4 {
+        margin-bottom: 20px;
+    }
     .articles_content .card {
         width: 100%;
     }
+    .footer .text1 {
+        width: 90%;
+        font-size: 40px;
+        margin: 70px auto 0;
+    }
     .footer_bottom {
         flex-direction: column;
+        margin-top: 50px;
     }
     .footer_bottom .card {
         width: 60%;
