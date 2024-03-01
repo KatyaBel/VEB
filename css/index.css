@@ -35,15 +35,21 @@ img {
 body {
     background: #040d1a;
     background-size: cover;
+    overflow-x: hidden;
+}
+.page {
+    max-width: 1400px;
 }
 
 /*Шапка*/
 .nav {
-    width: 95%;
     margin-bottom: 60px;
-    margin-top: 40px;
     display: flex;
     color: white;
+    position: sticky;
+    top: 0;
+    background-color: #040d1a;
+    padding: 35px 20px;
 }
 .logo_burger {
     display: flex;
@@ -728,15 +734,21 @@ body {
     .footer_bottom {
         flex-direction: column;
         margin-top: 50px;
+        text-align: center;
+    }
+    .footer_bottom .logo {
+        width: 60%;
+    }
+    .footer_bottom .logo img {
+        width: 30%;
     }
     .footer_bottom .card {
         width: 60%;
     }
-    .footer_bottom .logo {
-        width: 60%;
-
+    .footer_text1 {
+        margin-left: auto;
     }
-    .footer_bottom .logo img {
-        width: 30%;
+    .footer_text2 {
+        margin-left: auto;
     }
 }
