@@ -8,7 +8,7 @@ window.addEventListener('resize', function() {
 });
 //показать/скрыть бургер
 function updateState() {
-    const width = window.innerWidth;
+    const width = window.screen.width;
     let button_open = document.querySelector(".burger_open")
     let button_close = document.querySelector(".burger_close")
     let menu = document.querySelector(".menu")
