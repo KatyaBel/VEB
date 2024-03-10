@@ -47,6 +47,7 @@ body {
     display: flex;
     color: white;
     position: sticky;
+    z-index: 1;
     top: 0;
     background-color: #040d1a;
     padding: 35px 20px;
