@@ -437,49 +437,68 @@ body {
 }
 .articles .text1 {
     width: 85%;
-    font-size: 65px;
     margin-bottom: 50px;
-}
-.articles_content {
+    font-size: 65px;
+ }
+.articles_top {
     display: flex;
-    gap: 35px;
+}
+.articles_top .card_main {
+    min-width: 33%;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+.articles_top .card_main .card {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.articles_top .card_main .card .card_content {
+    flex-grow: 1;
+    position: relative;
+}
+.articles_top .cards_right {
+    display: flex;
+    flex-wrap: wrap;
+}
+.articles_top .cards_right .card {
+    width: 45%;
+}
+.articles_bottom {
+    display: flex;
+    flex-wrap: wrap;
+}
+.articles_bottom .card {
+    width: 30%;
 }
 .articles_content .card {
     margin-bottom: 35px;
 }
 .articles_content .card_content {
-    margin-top: -3px;
+    margin-top: -5px;
     padding: 25px;
     background-color: #042C54;
 }
-.articles_content .card_main {
-    min-width: 35%;
-    margin-top: 0;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.articles_content .card_main .card_content {
-    flex-grow: 1;
-    position: relative;
-}
-.articles_content .card .card_t {
+.articles_content .card_t {
     font-family: "ManropeLight", sans-serif;
     font-size: 12px;
     color: white;
 }
-.articles_content .card .card_read {
-    position: absolute;
-    bottom: 30px;
+.articles_content .card_h {
+    margin-bottom: 30px;
 }
-.articles_content .card .link {
+.articles_content .link {
     cursor: pointer;
     display: inline;
-    margin-top: 40px;
     border-bottom: 1px solid transparent;
 }
-.articles_content .card .link:hover {
+.articles_content .link:hover {
     border-color: white;
+}
+.articles_content .card_read {
+    position: absolute;
+    bottom: 25px;
 }
 
 /*Footer*/
@@ -511,6 +530,7 @@ body {
     width: 90%;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
     text-align: left;
     margin-top: 150px;
     margin-bottom: 70px;
@@ -641,14 +661,16 @@ body {
     .articles .text1 {
         font-size: 45px;
     }
-    .articles_content {
+    .articles_top, .articles_top .cards_right, .articles_bottom {
         flex-direction: column;
-        gap: 0;
     }
-    .articles_content .card {
+    .articles_top .card_main .card, .articles_top .cards_right .card, .articles_bottom .card {
         width: 80%;
     }
-    .articles_content .card .card_read {
+    .articles_top .card_main {
+        margin-bottom: 0;
+    }
+    .articles_content .card_read {
         position: relative;
         bottom: 0;
     }
@@ -718,7 +740,7 @@ body {
     .btn4 {
         margin-bottom: 20px;
     }
-    .articles_content .card {
+    .articles_top .card_main .card, .articles_top .cards_right .card, .articles_bottom .card {
         width: 100%;
     }
     .footer .text1 {
