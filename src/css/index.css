@@ -57,7 +57,8 @@ body {
 .nav .logo {
     font-family: "ManropeExtraBold", sans-serif;
     font-size: 22px;
-    cursor: pointer;
+    color: white;
+    text-decoration: none;
 }
 .burger_open {
     cursor: pointer;
@@ -114,26 +115,19 @@ body {
     font-size: 18px;
     color: white;
     padding: 18px;
+    border-radius: 5px;
+    border: none;
 }
 .btn1 {
     background-color: inherit;
-    border-radius: 5px;
-    border: none;
-}
-.btn1:hover {
-    background-color: #ae67fa;
-    cursor: pointer;
 }
 .btn2 {
     background-color: #FF4820;
-    border-radius: 5px;
-    border: none;
 }
-.btn2:hover {
+.nav .btn:hover {
     cursor: pointer;
     background-color: #ae67fa;
 }
-
 /*Голова*/
 .hero {
     width: 95%;
@@ -243,6 +237,7 @@ body {
     font-size: 16px;
     color: #FF8A71;
     border-bottom: 1px solid transparent;
+    text-decoration: none;
 }
 .text2:hover {
     border-color: #FF8A71;
@@ -251,7 +246,7 @@ body {
 /*Что такое gpt*/
 .what {
     width: 90%;
-    background: url("/img/bg.png") 0 0 /cover;
+    background: url("../img/bg.png") 0 0 /cover;
     border: 1px solid transparent;
     margin-bottom: 180px;
 }
